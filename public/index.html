@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Study Assistant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="brand-mark">✦</span><span>AI Study Assistant</span></div>
+    <div class="status"><span class="status-dot"></span> Your focused study space</div>
+  </header>
+
+  <main class="page-shell">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">STUDY, SIMPLIFIED</p>
+        <h1>Learn smarter with<br><em>your own material.</em></h1>
+        <p class="hero-copy">Upload your notes, ask thoughtful questions, and turn reading time into understanding.</p>
+      </div>
+      <div class="hero-note"><span>✎</span><strong>One document at a time.</strong><small>Your AI tutor stays grounded in what you upload.</small></div>
+    </section>
+
+    <div id="message" class="message" role="alert"></div>
+    <section class="dashboard">
+      <aside class="sidebar">
+        <div class="section-heading"><div><p class="eyebrow">YOUR LIBRARY</p><h2>Study materials</h2></div><span id="document-count" class="count">0</span></div>
+
+        <div id="drop-zone" class="drop-zone">
+          <div class="upload-icon">↑</div>
+          <strong>Drop a file here</strong>
+          <span>PDF or TXT, up to 10 MB</span>
+          <label class="choose-button" for="file-input">Choose file</label>
+          <input id="file-input" type="file" accept=".pdf,.txt,application/pdf,text/plain" hidden>
+          <p id="selected-file" class="selected-file">No file selected</p>
+        </div>
+        <button id="upload-button" class="primary-button full-width" disabled>Upload material <span>→</span></button>
+
+        <div id="document-list" class="document-list"></div>
+        <div id="empty-library" class="empty-state"><span>▱</span><p>No materials yet.</p><small>Upload a file to begin your study session.</small></div>
+      </aside>
+
+      <section class="chat-panel">
+        <div class="chat-header">
+          <div><p class="eyebrow">ASK YOUR TUTOR</p><h2 id="selected-title">Select a material to begin</h2></div>
+          <button id="clear-chat" class="text-button" disabled>Clear chat</button>
+        </div>
+        <div id="chat-messages" class="chat-messages">
+          <div class="welcome-message"><div class="welcome-icon">✦</div><h3>Your study session starts here</h3><p>Choose a material from your library, then ask a question about it. I’ll use only the content you provide.</p></div>
+        </div>
+        <form id="chat-form" class="chat-form">
+          <textarea id="question-input" rows="2" placeholder="Ask a question about your study material..." disabled></textarea>
+          <div class="chat-form-footer"><span class="input-hint">Press Enter to ask · Shift + Enter for a new line</span><button id="ask-button" class="primary-button" disabled>Ask AI <span>↗</span></button></div>
+        </form>
+      </section>
+    </section>
+  </main>
+  <script src="/script.js"></script>
+</body>
+</html>

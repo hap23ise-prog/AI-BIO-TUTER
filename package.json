@@ -1,0 +1,17 @@
+{
+  "name": "simple-ai-study-assistant",
+  "version": "1.0.0",
+  "description": "A beginner-friendly AI study assistant using Express, SQLite, and the OpenAI API.",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js"
+  },
+  "dependencies": {
+    "better-sqlite3": "^12.4.1",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "multer": "^2.0.2",
+    "openai": "^4.77.0",
+    "pdf-parse": "^1.1.1"
+  }
+}
